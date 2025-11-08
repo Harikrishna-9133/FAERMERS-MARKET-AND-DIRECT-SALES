@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Farmers' Market — Home</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-overlay"></div>
+
+  <nav class="navbar">
+    <div class="brand"><div class="logo">🌾 Farmers' Market</div></div>
+    <div class="nav-actions">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-register nav-register" href="login.html">Register / Login</a>
+      <a class="nav-dashboard" href="dashboard.html" style="display:none">Dashboard</a>
+      <button class="nav-logout" onclick="logout()" style="display:none">Logout</button>
+      <span class="nav-user" style="margin-left:8px;color:#fff;font-weight:600"></span>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Fresh from the Farm to Your Table</h1>
+      <p>Direct connection between farmers and customers — organic, fresh, and fair.</p>
+      <div style="margin-top:12px;">
+        <a class="btn" href="products.html">Shop Now</a>
+        <a class="btn secondary" href="about.html">Learn More</a>
+      </div>
+    </section>
+
+    <section style="margin-top:18px;">
+      <h2 style="text-align:center">Explore Fresh Products</h2>
+      <div id="homeGrid" class="card-grid" style="margin-top:12px;"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">© 2025 Farmers' Market</footer>
+  <script src="script.js"></script>
+</body>
+</html>

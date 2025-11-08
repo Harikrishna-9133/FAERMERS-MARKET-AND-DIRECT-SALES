@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard — Farmers' Market</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-overlay"></div>
+
+  <nav class="navbar">
+    <div class="brand"><div class="logo">🌾 Farmers' Market</div></div>
+    <div class="nav-actions">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a class="nav-dashboard" href="dashboard.html" style="display:none">Dashboard</a>
+      <a class="nav-register" href="login.html">Register / Login</a>
+      <button class="nav-logout" onclick="logout()" style="display:none">Logout</button>
+      <span class="nav-user" style="margin-left:8px;color:#fff;font-weight:600"></span>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h2 id="dashboardWelcome">Dashboard</h2>
+
+    <section id="farmerArea" style="display:none">
+      <h3>Add / Edit Product</h3>
+      <form id="addProductForm" class="form">
+        <input id="pname" class="input" placeholder="Product name (e.g., Mango)" required />
+        <input id="ptype" class="input" placeholder="Type (e.g., Fruit)" />
+        <input id="pprice" class="input" placeholder="Price (₹)" type="number" step="0.01" required />
+        <input id="pqty" class="input" placeholder="Quantity" type="number" step="0.01" required />
+        <select id="punit" class="input">
+          <option value="kg">Kilograms</option>
+          <option value="grams">Grams</option>
+          <option value="quintal">Quintals</option>
+          <option value="tons">Tons</option>
+        </select>
+        <input type="hidden" id="editingId" value="" />
+        <button id="addBtn" class="btn" type="submit">Add Product</button>
+      </form>
+
+      <h3 style="margin-top:18px">Your Products</h3>
+      <div id="farmerProducts" class="farmer-products"></div>
+    </section>
+
+    <section id="customerArea" style="display:none">
+      <h3>Customer view</h3>
+      <p class="muted">Customers can browse products at <a href="products.html">Products page</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">© 2025 Farmers' Market</footer>
+  <script src="script.js"></script>
+  
+
+</body>
+</html>

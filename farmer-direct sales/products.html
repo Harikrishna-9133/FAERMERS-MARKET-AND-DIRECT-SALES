@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Products — Farmers' Market</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-overlay"></div>
+
+  <nav class="navbar">
+    <div class="brand"><div class="logo">🌾 Farmers' Market</div></div>
+    <div class="nav-actions">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a class="nav-register" href="login.html">Register / Login</a>
+      <a class="nav-dashboard" href="dashboard.html" style="display:none">Dashboard</a>
+      <button class="nav-logout" onclick="logout()" style="display:none">Logout</button>
+      <span class="nav-user" style="margin-left:8px;color:#fff;font-weight:600"></span>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h2>All Products</h2>
+    <div id="productList" class="card-grid"></div>
+  </main>
+
+  <footer class="site-footer">© 2025 Farmers' Market</footer>
+  <script src="script.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+
+  <meta charset="utf-8">
+  <title>Register / Login — Farmers' Market</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* small override for tabs */
+    .tabs { display:flex; gap:8px; justify-content:center; margin-bottom:12px; }
+    .tabs button { padding:8px 16px; border-radius:8px; border:none; cursor:pointer; font-weight:700; }
+    .tabs button.active { background:#fff; color:#2e7d32; box-shadow:0 6px 14px rgba(0,0,0,0.08); }
+    .auth-grid { display:grid; grid-template-columns: 1fr 1fr; gap:18px; }
+    @media (max-width:880px){ .auth-grid { grid-template-columns:1fr; } }
+    .panel { background:#fff; padding:14px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.06); }
+    .login-small { font-size:0.95rem; color:#444; }
+  </style>
+</head>
+<body>
+  <div class="site-overlay"></div>
+
+  <nav class="navbar">
+    <div class="brand"><div class="logo">🌾 Farmers' Market</div></div>
+    <div class="nav-actions">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h2 style="text-align:center">Register / Login</h2>
+    <div class="tabs" id="loginTabs">
+      <button id="tabFarmer" class="active">Farmer</button>
+      <button id="tabCustomer">Customer</button>
+    </div>
+
+    <div class="auth-grid">
+      <!-- Farmer registration -->
+      <div id="farmerTab" class="panel">
+        <h3>Farmer Registration</h3>
+        <form id="farmerForm" class="form">
+          <input name="fname" class="input" placeholder="Full name" required />
+          <input name="farmName" class="input" placeholder="Farm name" />
+          <input name="area" class="input" placeholder="Area / Village" />
+          <input name="district" class="input" placeholder="District" />
+          <input name="state" class="input" placeholder="State" />
+          <input name="pincode" class="input" placeholder="Pincode" />
+          <input name="mobile" class="input" placeholder="Mobile number" required />
+          <input name="password" class="input" placeholder="Password" type="password" required />
+          <button class="btn" type="submit">Register & Login</button>
+        </form>
+
+        <hr style="margin:12px 0"/>
+        <h4 class="login-small">Already registered? Farmer Login</h4>
+        <form id="farmerLoginForm" class="form">
+          <input name="loginMobile" class="input" placeholder="Mobile number" required />
+          <input name="loginPassword" class="input" placeholder="Password" type="password" required />
+          <button class="btn secondary" type="submit">Login as Farmer</button>
+          <button onclick="logoutUser()" class="btn ghost">Logout</button>
+
+        </form>
+      </div>
+
+      <!-- Customer registration -->
+      <div id="customerTab" class="panel" style="display:none">
+        <h3>Customer Registration</h3>
+        <form id="customerForm" class="form">
+          <input name="cname" class="input" placeholder="Full name" required />
+          <input name="carea" class="input" placeholder="Area / Locality" />
+          <input name="cdistrict" class="input" placeholder="District" />
+          <input name="cstate" class="input" placeholder="State" />
+          <input name="cpincode" class="input" placeholder="Pincode" />
+          <input name="caddress" class="input" placeholder="Delivery address" />
+          <input name="cmobile" class="input" placeholder="Mobile number" required />
+          <input name="cpassword" class="input" placeholder="Password" type="password" required />
+          <button class="btn" type="submit">Register & Login</button>
+        </form>
+
+        <hr style="margin:12px 0"/>
+        <h4 class="login-small">Already registered? Customer Login</h4>
+        <form id="customerLoginForm" class="form">
+          <input name="cLoginMobile" class="input" placeholder="Mobile number" required />
+          <input name="cLoginPassword" class="input" placeholder="Password" type="password" required />
+          <button class="btn secondary" type="submit">Login as Customer</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">© 2025 Farmers' Market</footer>
+  <script src="script.js"></script>
+</body>
+</html>
