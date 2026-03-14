@@ -1,0 +1,6 @@
+{
+  "addProduct": true,
+  "getProducts": true,
+  "updateProduct": true,
+  "deleteProduct": true
+}
